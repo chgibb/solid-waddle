@@ -21,7 +21,8 @@
          Maintenance Tickets,
           
 * Database tables: Users, Rooms, Ticket
-* Users: Role (String), 
+* Users: 
+  * Role (String), 
   * First Name (String), 
   * Last Name (String), 
   * Year Level (Number), 
@@ -30,21 +31,25 @@
   * Sex (String),
   * Meal Plan (Bool),
            
-* Rooms: Type (String), 
+* Rooms: 
+  * Type (String), 
   * Capacity (Number),
   * Address (String),
   * Meal Plan (Bool),
   * Description (String),      
   * Amenities (Strings Array),
 
-* Tickets: Room ID,
+* Tickets: 
+  * Room ID,
   * User ID (Submitting Student),   
   * Title (String),
   * Content (String),
   * Urgency Rating (Number),
   * Resolved (Bool),
 
-* Announcements:Room ID,
+* Announcements: 
+  * Room ID,
   * User ID (Submitting Manager),
   * Title (String),
   * Content (String),
+                
