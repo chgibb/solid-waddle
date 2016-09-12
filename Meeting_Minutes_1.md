@@ -8,3 +8,46 @@
  * Slack is a chat application, Asana is an application used for scheduling work
 * Decided on future meeting times
  * Every Monday from 9:30 to 10:30
+
+## Management System Organization
+
+* Users: Managers, General Users
+
+* Pages: Landing Page, 
+         Rooms Detailed View, 
+         Rooms List, 
+         Student Application, 
+         Ask for support (maintenance)
+         Maintenance Tickets,
+          
+
+* Database tables: Users, Rooms, Tickets
+    * Users: Role (String), 
+             First Name (String), 
+             Last Name (String), 
+             Year Level (Number), 
+             Program (String), 
+             Warnings (String),
+             Sex (String),
+             Meal Plan (Bool),
+           
+    * Rooms: Type (String), 
+             Capacity (Number),
+             Address (String),
+             Meal Plan (Bool),
+             Description (String),      
+             Amenities (Strings Array),
+
+    * Tickets: Room ID,
+               User ID (Submitting Student),   
+               Title (String),
+               Content (String),
+               Urgency Rating (Number),
+               Resolved (Bool),
+
+    * Announcements:Room ID,
+                    User ID (Submitting Manager),
+                    Title (String),
+                    Content (String),
+                
+           
