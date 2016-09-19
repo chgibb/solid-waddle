@@ -1,0 +1,16 @@
+This document is meant to be a mock-up of what a client would send to a software development company.
+
+##Client Needs
+
+###Sign Up
+* A student should be able to sign up to the site (in real-world, their lakehead account would be used)
+* On sign up, a user should be required to enter information about him/herself such as: 
+ * Full name
+ * Student Number (?)
+ * Major
+ * Sex
+ * Co-op room yes/no
+ * 
+
+
+##Administration Needs
