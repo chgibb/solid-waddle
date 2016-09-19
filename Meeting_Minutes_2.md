@@ -12,6 +12,8 @@ Decided on how to proceed to build documentation, the first draft is due **Octob
 - Site map with wireframes
 - Project Gantt chart
 
+Started new document: waddle 2.0 features
+
 This weeks assignments:
 - Francesco and Erick will document the user case scenario
 - Chris will continue to familiarize themselves with Meteor
