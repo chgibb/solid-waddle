@@ -51,7 +51,7 @@ None
 
 *Basic flow of events:*
 1. User clicks the register button from the landing page
-2. User is provided with a registration form
+2. User is a student, and is provided with a registration form
 3. User is asked for: 
   * Lakehead email
   * First Name
@@ -67,6 +67,12 @@ None
 7. User is redirected to status page
 
 *Alternate flow of events:* 
+2a. User is an administrator, and is provided with a registration form
+2a1. User is asked for:
+ * Email
+ * First Name
+ * Last Name
+ 
 5a. Information is invalid
 5a1. Error message is displayed with the problem (e.g. not @lakehead email)
 5a2. User given chance to correct their entry
@@ -77,7 +83,7 @@ None
 
 ##Student Needs
 
-###Sign Up
+###Registration
 * A student should be able to sign up to the site (in real-world, their lakehead account would be used)
 * On sign up, a user should be required to enter information about him/herself such as: 
  * Full name
