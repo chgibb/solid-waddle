@@ -24,17 +24,17 @@ Template.hello.events({
 Template.register.events
 (
 	{
-		'submit form' : function()
+		'submit form' : function(event)
 		{
 			event.preventDefault();
 			var email = $('[name=email]').val();
 			var r = new RegExp("@lakeheadu.ca","g");
-			if(!email.test(r))
+			if(!r.test(email))
 			{
 				alert("Not a valid Lakehead email address");
 				return;
 			}
-			var password = $('[name=password]').val():
+			var password = $('[name=password]').val();
 			Accounts.createUser
 			(
 				{
@@ -42,6 +42,7 @@ Template.register.events
 					password : password
 				}
 			);
+			Meteor.users.find().fetch();
 		}
 	}
 );
