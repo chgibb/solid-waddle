@@ -24,6 +24,57 @@ This document is meant to be a mock-up of what a client would send to a software
 4a1. Error message displayed, new attempt allowed
 4a2. Forgot Password? Button displayed
   
+#Logout 
+
+##Primary Actors:
+* Students
+* Administration
+
+*Pre-Conditions:*
+* User is logged in
+
+*Basic flow of events:*
+1. User clicks the logout button from anywhere on the website
+2. User is logged out/session cleared
+3. User redirected to landing page
+
+*Alternate flow of events:*
+None
+
+#Registration 
+
+##Primary Actors:
+* Students
+
+*Pre-Conditions:*
+* None
+
+*Basic flow of events:*
+1. User clicks the register button from the landing page
+2. User is provided with a registration form
+3. User is asked for: 
+  * Lakehead email
+  * First Name
+  * Last Name
+  * Year Level
+  * Major
+  * Sex
+  * Co-ed room preference
+  * Meal Plan
+4. User hits the submit button
+5. Information is validated
+6. Database entry is added with the new user
+7. User is redirected to status page
+
+*Alternate flow of events:* 
+5a. Information is invalid
+5a1. Error message is displayed with the problem (e.g. not @lakehead email)
+5a2. User given chance to correct their entry
+3a. User navigates away from page before filling in full form
+3a1. User asked if they are sure they want to exit page, as they will lose their information
+3a2. User hits yes
+3a3. Form is reset, user redirected
+
 ##Student Needs
 
 ###Sign Up
