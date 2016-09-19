@@ -1,16 +1,45 @@
 This document is meant to be a mock-up of what a client would send to a software development company.
 
-##Client Needs
+#Login
+
+##Primary Actors:
+* Students
+* Administration
+
+*Pre-conditions:*
+* User has active account
+* Website exists
+
+*Basic flow of events:*
+1. User reaches landing page of website
+2. User clicks login button
+3. User enters username and password
+4. Username and password is validated server side
+5. User redirected to appropriate page depending on role
+
+*Alernate flow of events:*
+3a. Forgot username/password button is clicked
+3a1. Server sends email asking to set new password
+4a. Username or password is invalid
+4a1. Error message displayed, new attempt allowed
+4a2. Forgot Password? Button displayed
+  
+##Student Needs
 
 ###Sign Up
 * A student should be able to sign up to the site (in real-world, their lakehead account would be used)
 * On sign up, a user should be required to enter information about him/herself such as: 
  * Full name
  * Student Number (?)
+ * Year Level
  * Major
  * Sex
  * Co-op room yes/no
- * 
+ * Meal Plan (y/n)
+
+###Post-Sign Up
+####Pre-Approval
+####Post-Approval
 
 
 ##Administration Needs
