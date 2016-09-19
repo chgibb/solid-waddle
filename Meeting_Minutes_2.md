@@ -1,3 +1,5 @@
+September 19, 2016
+
 Review of previous meeting minutes and confirming our understanding of the project to date.
 
 Decided on how to proceed to build documentation, the first draft is due **October 19** and will contain:
