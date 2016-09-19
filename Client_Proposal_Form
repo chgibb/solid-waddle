@@ -39,9 +39,9 @@ This document is meant to be a mock-up of what a client would send to a software
 3. User redirected to landing page
 
 *Alternate flow of events:*
-None
+* None
 
-#Registration 
+#Registration
 
 ##Primary Actors:
 * Students
@@ -81,22 +81,73 @@ None
 3a2. User hits yes
 3a3. Form is reset, user redirected
 
-##Student Needs
 
-###Registration
-* A student should be able to sign up to the site (in real-world, their lakehead account would be used)
-* On sign up, a user should be required to enter information about him/herself such as: 
- * Full name
- * Student Number (?)
- * Year Level
- * Major
- * Sex
- * Co-op room yes/no
- * Meal Plan (y/n)
+#Application status check
 
-###Post-Sign Up
-####Pre-Approval
-####Post-Approval
+##Primary Actors:
+* Students
+
+*Pre-Conditions:*
+* Student is logged in
+* Student has not yet been assigned accomodation 
+
+*Basic flow of events:*
+1. User is directed to status check page and shown the current status of their application and an estimated completion time
+
+*Alternate flow of events:*
+* None
 
 
-##Administration Needs
+#Application details edit
+
+##Primary Actors:
+* Students
+
+*Pre-Conditions:*
+* Student is logged in
+* Student has not yet been assigned accomodation 
+
+*Basic flow of events:*
+1. User clicks 'Edit Application' from status check page
+2. User is shown the details of their application
+3. User has a chance to edit the following fields: 
+  * Year   
+  * Major
+  * Co-ed room preference
+  * Meal Plan
+4. User clicks 'Save Changes'
+5. User details updated in the database
+6. User is returned to the status check page
+
+*Alternate flow of events:*
+3a. User navigates away from page before filling in full form
+3a1. User asked if they are sure they want to exit page, as they will lose their information
+4a. User clicks 'Cancel'
+4a1. User is returned to the status check page
+
+
+#Application deleting
+
+##Primary Actors:
+* Students
+
+*Pre-Conditions:*
+* Student is logged in
+* Student has not yet been assigned accomodation 
+
+*Basic flow of events:*
+1. User clicks 'Cancel My Application' from status check page
+2. A modal window appears with deletion form 
+3. User enters their email for validation
+4. User clicks 'Delete Application'
+5. User is deleted from database
+
+*Alternate flow of events:*
+2a. User clicks outside the area of the modal window
+2a1. Modal window is closed and the user returned to the status check page
+3a. User enters incorrect email
+3a1. User is notified of mistake and has a chance to correct it.
+4a. User clicks 'Cancel'
+4a1. User is returned to the status check page
+
+  
