@@ -1,5 +1,20 @@
 This document is meant to be a mock-up of what a client would send to a software development company.
 
+This document contains cases for:
+#### All Users:
+* login
+* logout
+
+#### Student Users:
+* registration
+* application status check
+* application details edit
+* application delete
+
+#### Admin Users:
+* accommodation assignment
+* admin views room information
+
 #Login
 
 ##Primary Actors:
@@ -17,14 +32,14 @@ This document is meant to be a mock-up of what a client would send to a software
 4. Username and password is validated server side
 5. User redirected to appropriate page depending on role
 
-*Alernate flow of events:*
+*Alternate flow of events:*
 3a. Forgot username/password button is clicked
 3a1. Server sends email asking to set new password
 4a. Username or password is invalid
 4a1. Error message displayed, new attempt allowed
 4a2. Forgot Password? Button displayed
-  
-#Logout 
+
+#Logout
 
 ##Primary Actors:
 * Students
@@ -52,7 +67,7 @@ This document is meant to be a mock-up of what a client would send to a software
 *Basic flow of events:*
 1. User clicks the register button from the landing page
 2. User is a student, and is provided with a registration form
-3. User is asked for: 
+3. User is asked for:
   * Lakehead email
   * First Name
   * Last Name
@@ -66,13 +81,13 @@ This document is meant to be a mock-up of what a client would send to a software
 6. Database entry is added with the new user
 7. User is redirected to status page
 
-*Alternate flow of events:* 
+*Alternate flow of events:*
 2a. User is an administrator, and is provided with a registration form
 2a1. User is asked for:
  * Email
  * First Name
  * Last Name
- 
+
 5a. Information is invalid
 5a1. Error message is displayed with the problem (e.g. not @lakehead email)
 5a2. User given chance to correct their entry
@@ -81,7 +96,6 @@ This document is meant to be a mock-up of what a client would send to a software
 3a2. User hits yes
 3a3. Form is reset, user redirected
 
-
 #Application status check
 
 ##Primary Actors:
@@ -89,7 +103,7 @@ This document is meant to be a mock-up of what a client would send to a software
 
 *Pre-Conditions:*
 * Student is logged in
-* Student has not yet been assigned accomodation 
+* Student has not yet been assigned accommodation
 
 *Basic flow of events:*
 1. User is directed to status check page and shown the current status of their application and an estimated completion time
@@ -105,13 +119,13 @@ This document is meant to be a mock-up of what a client would send to a software
 
 *Pre-Conditions:*
 * Student is logged in
-* Student has not yet been assigned accomodation 
+* Student has not yet been assigned accommodation
 
 *Basic flow of events:*
 1. User clicks 'Edit Application' from status check page
 2. User is shown the details of their application
-3. User has a chance to edit the following fields: 
-  * Year   
+3. User has a chance to edit the following fields:
+  * Year
   * Major
   * Co-ed room preference
   * Meal Plan
@@ -133,11 +147,11 @@ This document is meant to be a mock-up of what a client would send to a software
 
 *Pre-Conditions:*
 * Student is logged in
-* Student has not yet been assigned accomodation 
+* Student has not yet been assigned accommodation
 
 *Basic flow of events:*
 1. User clicks 'Cancel My Application' from status check page
-2. A modal window appears with deletion form 
+2. A modal window appears with deletion form
 3. User enters their email for validation
 4. User clicks 'Delete Application'
 5. User is deleted from database
@@ -150,4 +164,112 @@ This document is meant to be a mock-up of what a client would send to a software
 4a. User clicks 'Cancel'
 4a1. User is returned to the status check page
 
-  
+#Accommodation Assignment
+
+##Primary Actors:
+* Administrator
+
+*Pre-Conditions*
+* Admin is logged in
+* Date for submitting applications has passed
+
+*Basic flow of events:*
+1. Admin navigates to the assignment tab
+2. Admin looks at statistics such as available rooms/people looking for rooms
+3. Admin clicks 'assign rooms' button which auto fills rooms
+4. Admin can review the auto selections, and then confirm
+
+*Alternate flow of events:*
+3a1. Admin manually assigns rooms to people (we would like to minimize/eliminate this)
+3a2. Admin confirms selections
+3b1. Auto room filler leaves some people left over
+3b2. Admin assigns these people rooms
+3b3. Admin confirms selections
+3b1a1. There are no rooms for people
+3b1a2. Admin must email these people externally
+
+#Admin Views Room Information
+
+##Primary Actors:
+* Administrator
+
+*Pre-conditions*
+* Admin is logged in
+* Rooms exist in the system
+
+*Basic flow of events:*
+1. Administrator navigates to room list tab
+2. Administrator can choose any of the rooms which is a link to that room page
+3. Information fills with the specific room filled
+  * Room devices (microwave, desk, bed etc...)
+  * Room residents
+  * Duration of stay (?)
+
+*Alternate flow of events:*
+* None
+
+#Admin Sends Message
+
+##Primary Actors:
+* Administrator
+
+*Pre-conditions*
+* Administrator is logged in
+* Rooms exist in the system
+* Rooms have been assigned
+
+*Basic flow of events:*
+1. Administrator navigates to messaging tab
+2. Administrator chooses to message a room
+3. Administrator enters message to residents
+4. Administrator submits message
+
+*Alternate flow of events:*
+2a1. Admin chooses to message an individual user
+2a2. Admin types message
+2a3. Admin submits message
+2b1. Admin chooses to message a building
+2b2. Admin types message
+2b3. Admin submits message
+
+#Admin Creates a Room
+
+## Primary Actors
+* Administrator
+
+*Pre-Conditions*
+* Admin is logged in
+* Some buildings exist
+
+*Basic flow of events:*
+1. Navigate to room creation page
+2. Form is visible, with fields:
+  * Building -> dropdown/search box
+  * Room number
+  * Accommodations ->
+3. Form is filled out
+4. Admin submits room
+
+*Alternate flow of events:*
+4a1. Form isn't filled out sufficiently
+4a2. Admin given opportunity to fill out form with proper information, error messages are provided
+
+#Admin Creates a Building
+
+## Primary Actors
+
+*Pre-Conditions*
+* Admin is logged in
+
+*Basic flow of events:*
+1. Navigate to building creation page
+2. Form is visible with fields:
+  * Building Name
+  * Co-Op (yes/no)
+  * Location
+3. Form is filled out
+4. Admin submits building
+
+*Alternate flow of events:*
+4a1. Form isn't filled out sufficiently
+4a2. Admin given opportunity to fill out form with proper information, error messages are provided
