@@ -17,6 +17,11 @@ Template.register.events
 				return;
 			}
 			var password = $('[name=password]').val();
+			if(!password)
+			{
+				alert("Must enter password");
+				return;
+			}
 			Accounts.createUser
 			(
 				{
