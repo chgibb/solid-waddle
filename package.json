@@ -1,5 +1,5 @@
 {
-  "name": "simple",
+  "name": "solid-waddle",
   "private": true,
   "scripts": {
     "start": "meteor run"
