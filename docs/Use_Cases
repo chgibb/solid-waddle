@@ -11,6 +11,7 @@ This document contains cases for:
 * application details edit
 * application delete
 * user views messages
+* Student sends message
 * user views room information
 
 #### Admin Users:
@@ -117,6 +118,38 @@ This document contains cases for:
 *Alternate flow of events:*
 * None
 
+#Student views a message
+
+##Primary Actors
+*Student
+
+*Pre-conditions*
+* Logged in as student
+
+*Basic flow of events:*
+1. Navigate to your room home page
+2. Messages appear in list on that page
+3. Click on message to fully view contents
+
+*Alternate flow of events:*
+2a1. There are no messages to display
+2a2. Small notice saying there are no messages
+
+#Student sends a message
+##Primary Actors:
+
+*Pre-Conditions*
+* Student is logged in
+* Student has a room assigned
+
+*Basic flow of events:*
+1. User clicks on 'Send Message' button
+2. User given form to fill containing message title, message type, message content
+3. User submits message
+
+*Alternate flow of events:*
+3a1. Form not filled out properly
+3a2. User given another opportunity to fill in form.
 
 #Application details edit
 
@@ -145,7 +178,6 @@ This document contains cases for:
 4a. User clicks 'Cancel'
 4a1. User is returned to the status check page
 
-
 #Application deleting
 
 ##Primary Actors:
@@ -170,7 +202,7 @@ This document contains cases for:
 4a. User clicks 'Cancel'
 4a1. User is returned to the status check page
 
-#User views room information
+#Student views room information
 
 ##Primary Actors:
 * Student
@@ -313,21 +345,4 @@ None
 
 *Alternate flow of events:*
 2a1. There are no messages to display.
-2a2. Small notice saying there are no messages
-
-#Student views a message
-
-##Primary Actors
-*Student
-
-*Pre-conditions*
-* Logged in as student
-
-*Basic flow of events:*
-1. Navigate to your room home page
-2. Messages appear in list on that page
-3. Click on message to fully view contents
-
-*Alternate flow of events:*
-2a1. There are no messages to display
 2a2. Small notice saying there are no messages
