@@ -20,6 +20,10 @@ This document contains cases for:
 * admin sends message
 * admin creates room
 * admin creates building
+* admin deletes room
+* admin deletes building
+* admin edits room
+* admin edits building
 * admin views messages from residents
 
 #Login
@@ -78,6 +82,42 @@ This document contains cases for:
   * Lakehead email
   * First Name
   * Last Name
+  * Password
+  * Re-entry of password
+4. User hits the submit button
+5. Database entry is added with the new user
+6. User is redirected to Application Page
+
+*Alternate flow of events:*
+2a. User is an administrator, and is provided with a registration form
+2a1. User is asked for:
+ * Email
+ * First Name
+ * Last Name
+ * password
+ * Re-entry of password
+2a2. Admin confirms and is added to database
+5a. Information is invalid
+5a1. Error message is displayed with the problem (e.g. not @lakehead email)
+5a2. User given chance to correct their entry
+3a. User navigates away from page before filling in full form
+3a1. User asked if they are sure they want to exit page, as they will lose their information
+3a2. User hits yes
+3a3. Form is reset, user redirected
+
+#Application Creation
+
+##Primary Actors:
+* Students
+
+*Pre-Conditions:*
+* Student is logged in
+* User does not have an application
+
+*Basic flow of events:*
+1. User clicks 'create application' button on applications page
+2. User is provided with application form
+3. User is asked for:
   * Year Level
   * Major
   * Sex
@@ -89,12 +129,6 @@ This document contains cases for:
 7. User is redirected to status page
 
 *Alternate flow of events:*
-2a. User is an administrator, and is provided with a registration form
-2a1. User is asked for:
- * Email
- * First Name
- * Last Name
-
 5a. Information is invalid
 5a1. Error message is displayed with the problem (e.g. not @lakehead email)
 5a2. User given chance to correct their entry
@@ -329,8 +363,86 @@ None
 4a1. Form isn't filled out sufficiently
 4a2. Admin given opportunity to fill out form with proper information, error messages are provided
 
-#Admin views a message
+#Admin Deletes a Building
+##Primary Actors
+*Pre-Conditions*
+* Admin is logged in
+* Room exists
 
+*Basic flow of events:*
+1. Navigate to building page
+2. List of buildings appear
+3. Click the 'delete building' button
+4. Dialogue to confirm appears
+5. Confirm deletion
+6. Building is deleted
+
+*Alternate flow of events:*
+5a1. Do not confirm
+5a2. Building is not deleted
+
+#Admin Deletes a Room
+##Primary Actors
+*Pre-Conditions*
+* Admin is logged in
+* Rooms exist
+
+*Basic flow of events:*
+1. Navigate to room page
+2. List of rooms appear
+3. Click the 'delete room' button
+4. Dialogue to confirm appears
+5. Confirm deletion
+6. Room is deleted
+
+*Alternate flow of events:*
+5a1. Do not confirm
+5a2. Room is not deleted
+
+#Admin Edits a Building
+##Primary Actors
+*Pre-Conditions*
+* Admin is logged in
+* Buildings exist
+
+*Basic flow of events:*
+1. Navigate to buildings page
+2. List of buildings appears
+3. Click on 'edit buildling' button
+4. Form to edit building information appears
+5. Admin fills in information they would like to edit
+6. Admin confirms Edits
+7. Admin redirected to buildings page
+
+*Alternate flow of events:*
+6a1. Admin does not confirm Edits
+6a2. Admin given opportunity to re-enter some information, or cancel edit
+6b1. Form filled out incorrectly
+6b2. Admin given opportunity to change form information
+
+#Admin Edits a Room
+##Primary Actors
+*Pre-Conditions*
+* Admin is logged in
+* Rooms exist
+
+*Basic flow of events:*
+1. Navigate to rooms page
+2. List of rooms appears
+3. Click on 'edit room' button
+4. Form to edit rooms information appears
+5. Admin fills in information they would like to edit
+6. Admin confirms Edits
+7. Admin redirected to rooms page
+
+*Alternate flow of events:*
+6a1. Admin does not confirm Edits
+6a2. Admin given opportunity to re-enter some information, or cancel edit
+6b1. Form filled out incorrectly
+6b2. Admin given opportunity to change form information
+
+
+#Admin views a message
 ##Primary Actors
 * Admin
 
