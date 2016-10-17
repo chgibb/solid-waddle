@@ -1,5 +1,3 @@
-
-
 Domain Analysis
 
 Sources: Domain Experts, Existing Residence Software (LU Res), existing docs.
@@ -7,7 +5,7 @@ Sources: Domain Experts, Existing Residence Software (LU Res), existing docs.
 Interviewing, Brainstorming, Use Case analysis can help with domain analysis.
 
 1. **Introduction**
-The domain for the _Residence Management System at Lakehead University, Thunder Bay_is **Residence Management**. We aim to provide a user-friendly, simple and efficient way of allowing students to reserve and manage their housing in Lakehead University Residence.
+The domain for the Residence Management System at Lakehead University, Thunder Bay is **Residence Management**. We aim to provide a user-friendly, simple and efficient way of allowing students to reserve and manage their housing in Lakehead University Residence.
 2. **Glossary**
 3. **General Knowledge about the domain**
 Domain experts are required to have thorough knowledge regarding
@@ -37,4 +35,3 @@ The software is designed to be capable on running on Windows, Linux, Symbian, BB
 7. **Competing Software**
 8. **Similarities across domains and organizations**
 Our software allows
-
