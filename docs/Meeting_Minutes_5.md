@@ -4,14 +4,14 @@ Nobody was absent.
 
 # Meeting Minutes 5  
 
-Groupd met to discuss finalizing documentation for presentation on October 21.  
+Group met to discuss finalizing documentation for presentation on October 21.  
 1. Domain Analysis  
-  - done  
+done  
 2. Use Case Descriptions  
-  - Erik  
+Erik  
 3. Architecture and Modeling Design  
-  - Francesco  
+Francesco  
 4. UI Design  
-  - Shane  
+Shane  
 5. Detail Design Documents Typing  
- - Chris  
+Chris  
