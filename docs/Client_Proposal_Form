@@ -10,6 +10,8 @@ This document contains cases for:
 * application status check
 * application details edit
 * application delete
+* user views messages
+* user views room information
 
 #### Admin Users:
 * accommodation assignment
@@ -168,6 +170,23 @@ This document contains cases for:
 4a. User clicks 'Cancel'
 4a1. User is returned to the status check page
 
+#User views room information
+
+##Primary Actors:
+* Student
+
+*Pre-Conditions*
+* Student is logged in
+* Rooms have been assigned
+* This user has a room assigned
+
+*Basic flow of events:*
+1. Upon student log in, they are directed to room profile page
+2. User can see their building, room number, and roommates
+
+*Alternate flow of events:*
+None
+
 #Accommodation Assignment
 
 ##Primary Actors:
@@ -277,3 +296,38 @@ This document contains cases for:
 *Alternate flow of events:*
 4a1. Form isn't filled out sufficiently
 4a2. Admin given opportunity to fill out form with proper information, error messages are provided
+
+#Admin views a message
+
+##Primary Actors
+* Admin
+
+*Pre-conditions*
+* Logged in as admin
+
+*Basic flow of events:*
+1. Navigate to message page
+2. List of messages appears
+3. Click on message to read and view information about sender
+4. Close message
+
+*Alternate flow of events:*
+2a1. There are no messages to display.
+2a2. Small notice saying there are no messages
+
+#Student views a message
+
+##Primary Actors
+*Student
+
+*Pre-conditions*
+* Logged in as student
+
+*Basic flow of events:*
+1. Navigate to your room home page
+2. Messages appear in list on that page
+3. Click on message to fully view contents
+
+*Alternate flow of events:*
+2a1. There are no messages to display
+2a2. Small notice saying there are no messages
