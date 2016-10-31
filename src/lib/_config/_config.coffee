@@ -44,13 +44,13 @@
 			url: 'http://facebook.com/benjaminpeterjones'
 			icon: 'facebook'
 		twitter:
-			url: 'http://twitter.com/BenPeterJones'
+			url: ''
 			icon: 'twitter'
 		github:
-			url: 'http://github.com/yogiben'
+			url: 'http://github.com/chgibb/solid-waddle'
 			icon: 'github'
 		info:
-			url: 'http://meteorfactory.io'
+			url: ''
 			icon: 'link'
 
 	#Routes
