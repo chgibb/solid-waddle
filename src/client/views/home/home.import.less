@@ -1,4 +1,4 @@
-@home-intro-bg: url(img/lakehead-university-campus-shot.jpg);
+@home-intro-bg: url(img/lakehead-university-campus-shot.jpg) no-repeat center center;
 @home-colored-section-bg: @gray-lighter;
 @home-colored-section-color: black;
 
@@ -6,9 +6,11 @@
 {
   nav.navbar
   {
-    background: darken(#fff, 15%);
+    background: darken(rgb(0,66,122), 15%);
     width: 100%;
     z-index: 1000;
+    border-style: none;
+    
     .link
     {
       color: white;
@@ -58,7 +60,9 @@
   }
   section#intro
   {
+    width:100%;
     background: @home-intro-bg;
+    background-image: 
     color: white;
     h1
     {
