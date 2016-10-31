@@ -32,7 +32,10 @@ Schemas.UserProfile = new SimpleSchema(
   warnings:
     type: String
     optional: true
-    hidden: true
+    autoform: {
+      type: "hidden",
+      label: false
+    }
 
   mealPlan:
     type: Boolean
