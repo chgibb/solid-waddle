@@ -3,6 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
+					{{> navBar}}
 					{{> addPost}}
 					{{> favoritesSidebar}}
 				</div>
@@ -13,6 +14,26 @@
 		</div>
 	</div>
 </template>
+
+<template name = "navBar">
+	<script>
+			function openNav() {
+    		document.getElementById("menu-sidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("menu-sidenav").style.width = "0";
+			}
+	</script>
+	<div id = "menu-sidenav" class = "sidenav">
+		<a href = "javascript:void(0)" class = "closebtn" onClick = "closeNav()">&times;</a>
+		<a href = "#">stuff</a>
+		<a href = "#">stuff</a>
+		<a href = "#">stuff</a>
+		<a href = "#">stuff</a>
+	</div>
+</template>
+
 
 <template name="addPost">
 	<div class="template-add-post">
