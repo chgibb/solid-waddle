@@ -23,8 +23,6 @@ Schemas.Posts = new SimpleSchema
 			if this.isUpdate
 				new Date()
 
-	
-
 	owner:
 		type: String
 		regEx: SimpleSchema.RegEx.Id
