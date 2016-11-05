@@ -9,6 +9,29 @@
 				{ label: 'Title', name: 'title' }
 				{ label: 'User', name: 'author()', template: 'adminUserCell' }
 			]
+		Buildings:
+			color: 'yellow'
+			icon: 'pencil'
+			extraFields: ['owner']
+			tableColumns: [
+				{ label: 'Name', name: 'name' }
+				{ label: 'Address', name: 'author()', template: 'adminUserCell' }
+			]
+
+		Rooms:
+			color: 'red'
+			icon: 'pencil'
+			extraFields: ['owner']
+			tableColumns: [
+				{ label: 'Building', name: 'building_name' }
+				{ label: 'Number', name: 'number' }
+				{ label: 'Type', name: 'type' }
+				{ label: 'Capacity', name: 'capacity' }
+				{ label: 'Meal Plan', name: 'meal_plan' }
+				{ label: 'Description', name: 'description' }
+				{ label: 'Amenities', name: 'amenities' }
+			]
+
 		Comments:
 			color: 'green'
 			icon: 'comments'
