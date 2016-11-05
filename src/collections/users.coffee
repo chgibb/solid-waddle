@@ -41,30 +41,30 @@ Schemas.UserProfile = new SimpleSchema(
     type: Boolean
     optional: false
 
-  #birthday:
-  #  type: Date
-  #  optional: true
+  birthday:
+   type: Date
+   optional: true
 
-  # bio:
-  #   type: String
-  #   optional: true
-  #   autoform:
-  #     rows: 4
+  bio:
+    type: String
+    optional: true
+    autoform:
+      rows: 4
 
-  # location:
-  #   type: String
-  #   optional: true
-  #   autoform:
-  #     type: 'map'
-  #     geolocation: true
-  #     searchBox: true
-  #     autolocate: true
+  location:
+    type: String
+    optional: true
+    autoform:
+      type: 'map'
+      geolocation: true
+      searchBox: true
+      autolocate: true
 
-  # country:
-  #   type: String
-  #   label: 'Nationality'
-  #   allowedValues: Utils.countryList
-  #   optional: true
+  country:
+    type: String
+    label: 'Nationality'
+    allowedValues: Utils.countryList
+    optional: true
 )
 
 Schemas.User = new SimpleSchema(

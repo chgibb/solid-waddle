@@ -6,3 +6,9 @@ Meteor.publish 'posts', ->
 
 Meteor.publish 'attachments', ->
 	Attachments.find()
+
+Meteor.publish 'buildings', ->
+	Buildings.find()
+
+Meteor.publish 'rooms', ->
+	Rooms.find()
