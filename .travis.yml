@@ -12,5 +12,6 @@ addons:
       - g++-4.9
 script:
    - curl https://install.meteor.com/ | sh
+   - cd src
    - meteor build build
 
