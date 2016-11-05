@@ -49,5 +49,6 @@ TicketsSchema = new SimpleSchema({
       label: false
     }
   }
-
 });
+
+Tickets.attachSchema(TicketsSchema);
