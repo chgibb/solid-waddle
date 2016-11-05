@@ -51,6 +51,9 @@
 						Meteor.users.find comment.owner, limit: 1
 				}
 			]
+		Tickets:
+			color: 'blue'
+			icon: 'comments'
 	dashboard:
 		homeUrl: '/dashboard'
 	autoForm:
