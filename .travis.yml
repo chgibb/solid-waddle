@@ -13,5 +13,5 @@ addons:
 script:
    - curl https://install.meteor.com/ | sh
    - cd src
-   - meteor build ../output
+   - meteor build ../output --server-only
 
