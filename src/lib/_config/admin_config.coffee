@@ -15,16 +15,25 @@
 			extraFields: ['owner']
 			tableColumns: [
 				{ label: 'Name', name: 'name' }
-				{ label: 'Address', name: 'author()', template: 'adminUserCell' }
+				{ label: 'Address', name: 'address'}
+				{ label: 'Number of Rooms', name:'number_of_rooms' }
+				{ label: 'Room types available', name:'room_types' }
 			]
 
 		Rooms:
 			color: 'red'
 			icon: 'pencil'
-			extraFields: ['owner']
+			extraFields: ['buildings']
+			routes:
+		        new:
+		        	waitOn: -> Meteor.subscribe('buildings')
+				view:
+	         		waitOn: -> Meteor.subscribe('buildings')
+		        edit:
+		        	waitOn: -> Meteor.subscribe('buildings')
 			tableColumns: [
-				{ label: 'Building', name: 'building_name' }
-				{ label: 'Number', name: 'number' }
+				{ label: 'Building Name', name: 'building()'}
+				{ label: 'Number', name: 'room_number' }
 				{ label: 'Type', name: 'type' }
 				{ label: 'Capacity', name: 'capacity' }
 				{ label: 'Meal Plan', name: 'meal_plan' }
