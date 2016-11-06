@@ -24,6 +24,7 @@ Schemas.UserProfile = new SimpleSchema(
   yearLevel:
     type: Number
     optional: false
+    min: 1
 
   program:
     type: String
@@ -40,31 +41,31 @@ Schemas.UserProfile = new SimpleSchema(
   mealPlan:
     type: Boolean
     optional: false
-
-  birthday:
-   type: Date
-   optional: true
-
-  bio:
-    type: String
-    optional: true
-    autoform:
-      rows: 4
-
-  location:
-    type: String
-    optional: true
-    autoform:
-      type: 'map'
-      geolocation: true
-      searchBox: true
-      autolocate: true
-
-  country:
-    type: String
-    label: 'Nationality'
-    allowedValues: Utils.countryList
-    optional: true
+  #
+  # birthday:
+  #  type: Date
+  #  optional: true
+  #
+  # bio:
+  #   type: String
+  #   optional: true
+  #   autoform:
+  #     rows: 4
+  #
+  # location:
+  #   type: String
+  #   optional: true
+  #   autoform:
+  #     type: 'map'
+  #     geolocation: true
+  #     searchBox: true
+  #     autolocate: true
+  #
+  # country:
+  #   type: String
+  #   label: 'Nationality'
+  #   allowedValues: Utils.countryList
+  #   optional: true
 )
 
 Schemas.User = new SimpleSchema(
