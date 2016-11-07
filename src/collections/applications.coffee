@@ -19,7 +19,6 @@ Schemas.Application = new SimpleSchema
 		type: String
 		label: "Building Name"
 		optional: true
-		defaultValue: -1
 		autoform:
 			options: ->
 				_.map Buildings.find({}).fetch(), (building)->
