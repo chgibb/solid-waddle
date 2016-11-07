@@ -1,5 +1,6 @@
 @AdminConfig =
 	name: Config.name
+	userSchema: null
 	collections:
 		Buildings:
 			color: 'yellow'
@@ -24,6 +25,7 @@
 				{ label: 'Room Number', name: 'room_number'}
 				{ label: 'Building', name: 'building_name'}
 				{ label: 'Type', name: 'type'}
+				{ label: 'Occupants', name: 'occupants'}
 				{ label: 'Capacity', name: 'capacity'}
 				{ label: 'Description', name: 'description'}
 				{ label: 'Amenities', name: 'amenities'}
