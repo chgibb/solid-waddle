@@ -13,6 +13,7 @@ Schemas.Rooms = new SimpleSchema
 	room_number:
 		type: Number
 
+
 	type:
 		type: Number
 		autoform:
@@ -36,7 +37,7 @@ Schemas.Rooms = new SimpleSchema
 		    ];
 
 	amenities:
-		type: String
+		type: Number
 		optional: true,
 		autoform:
 			type: "select-checkbox-inline",
@@ -53,9 +54,6 @@ Schemas.Rooms = new SimpleSchema
 		type: String
 		autoform:
 			rows: 5
-
-	meal_plan:
-		type: Boolean
 
 	createdAt:
 		type: Date

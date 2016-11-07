@@ -8,24 +8,10 @@ Schemas.Buildings = new SimpleSchema
 	address:
 		type: String
 		autoform:
-			rows: 5
+			rows: 2
 
 	number_of_rooms:
 		type: Number
-
-	room_types:
-		type: String
-		optional: true,
-		autoform:
-		  type: "select-checkbox-inline",
-		  options: ->
-		  	[
-		      {label: "Basic Single", value: '1'},
-		      {label: "Single", value: '2'},
-			  {label: "Apartment", value: '3'},
-		      {label: "Townhouse", value: '4'}
-		    ];
-
 
 	createdAt:
 		type: Date
