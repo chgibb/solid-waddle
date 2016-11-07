@@ -45,62 +45,111 @@
             </div>
         </div>
         <div class="container">
-            <div class="row" id="icon-row">
-                <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.4s">
-                    <div class="iconbox">
-                        <i class="fa fa-plane fa-3x"></i>
-                    </div>
-                    <h2 class="icntitle">1. {{_ "step_1"}}</h2>
-                    <p class="icnp">{{_ "step_1_text"}}</p>
-                </div>
-                <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
-                    <div class="iconbox">
-                        <i class="fa fa-bolt fa-3x"></i>
-                    </div>
-                    <h2 class="icntitle">2. {{_ "step_2"}}</h2>
-                    <p class="icnp">{{_ "step_2_text"}}</p>
-                </div>
-                <div class="col-md-4 wow fadeInUp animated" data-wow-delay="1.2s">
-                    <div class="iconbox">
-                        <i class="fa fa-check fa-3x"></i>
-                    </div>
-                    <h2 class="icntitle">3. {{_ "step_3"}}</h2>
-                    <p class="icnp">{{_ "step_3_text"}}</p>
-                </div>
-            </div>
+          <div class="row" id="icon-row">
+              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.4s">
+                  <div class="iconbox">
+                    <!-- <i class="fa fa-file-text-o-3x" aria-hidden="true"></i> -->
+                    <i class="fa fa-file-text-o fa-3x"></i>
+                  </div>
+                  <h2 class="icntitle">1. {{_ "step_1"}}</h2>
+                  <p class="icnp">{{_ "step_1_text"}}</p>
+              </div>
+              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
+                  <div class="iconbox">
+                      <i class="fa fa-clock-o fa-3x"></i>
+                  </div>
+                  <h2 class="icntitle">2. {{_ "step_2"}}</h2>
+                  <p class="icnp">{{_ "step_2_text"}}</p>
+              </div>
+              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="1.2s">
+                  <div class="iconbox">
+                      <i class="fa fa-building fa-3x"></i>
+                  </div>
+                  <h2 class="icntitle">3. {{_ "step_3"}}</h2>
+                  <p class="icnp">{{_ "step_3_text"}}</p>
+              </div>
+          </div>
         </div>
     </section>
     <section id="ipad" class="colored text-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>{{_ "section_ipad_header"}}</h3>
-                    <p>{{_ "section_ipad_text"}}</p>
+                    <h3 style="color:#000000">{{_ "section_ipad_header"}}</h3>
+                    <p style="color:#000000">{{_ "section_ipad_text"}}</p>
                     <p class="text-center">
-                    <a href="{{Config.about}}" target="_blank" class="btn btn-success">
+                    <a href="https://www.lakeheadu.ca/current-students/residence" target="_blank" class="btn btn-success">
                     {{_ "section_ipad_btn"}}
                     </a>
                     </p>
                 </div>
                 <div class="col-sm-6">
-                    <img id="ipad" src="/img/ipad.png" alt="" class="wow animated fadeInRight" data-wow-delay="1s">
+                    <img id="ipad" src="/img/orillia-campus.jpg" height="auto" width="85%" alt="" class="wow animated fadeInRight" data-wow-delay="1s">
                 </div>
             </div>
         </div>
     </section>
     <section id="final">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s">
-                    <h3>
-                    {{_ "final_text"}}
-                    </h3>
-                    <div class="text-center">
-                        <a class="btn btn-primary" href="http://www.lucss.ca">{{_ "final_cta"}}</a>
-                    </div>
+            <!-- <div class="row"> -->
+                <!-- <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s"> -->
+                    <!-- <h3> -->
+                    <!-- {{_ "final_text"}} -->
+                    <!-- </h3> -->
+                    <!-- <div class="text-center"> -->
+                        <!-- <a class="btn btn-primary" href="http://www.lucss.ca">{{_ "final_cta"}}</a> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-8  wow fadeInUp animated"> -->
+                    <!-- <img src="img/logoribbon.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture"> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <div class="row2">
+              <h2 style="text-align: center ">We have an array of room types to choose from</h2>
+                <div class="col-md-4">
+                  <h3 style="text-align: center">Basic Single Room</h3>
+                  <div class="text-center">
+                     <a class="btn btn-primary" href="https://www.lakeheadu.ca/current-students/residence/tb/choices/residence-halls/bartley">{{_ "final_cta"}}</a>
+                  </div>
                 </div>
-                <div class="col-md-8  wow fadeInUp animated">
-                    <img src="img/logoribbon.png" class="img-responsive wow" data-wow-delay="0.6s" alt="picture">
+                <div class="col-md-6">
+                  <img align="right" src="/img/basic.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+                </div>
+
+                <div style=margin-top class="col-md-4">
+                  <h3 style="text-align: center">Single Room</h3>
+                  <div class="text-center">
+                     <a class="btn btn-primary" href="https://www.lakeheadu.ca/current-students/residence/tb/choices/residence-halls/bartley">{{_ "final_cta"}}</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <img align="right" src="/img/single.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+                </div>
+
+                <div style=margin-top class="col-md-4">
+                  <h3 style="text-align: center">Apartment</h3>
+                  <div class="text-center">
+                     <a class="btn btn-primary" href="https://www.lakeheadu.ca/current-students/residence/tb/choices/apartments/apartment-rooms">{{_ "final_cta"}}</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <img align="right" src="/img/apt.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+                </div>
+
+                <div class="col-md-4">
+                  <h3 style="text-align: center">Townhouse</h3>
+                  <div class="text-center">
+                     <a class="btn btn-primary" href="https://www.lakeheadu.ca/current-students/residence/tb/choices/townhouses/townhouse-rooms">{{_ "final_cta"}}</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <img align="right" src="/img/townhouse1.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+                </div>
+
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-6">
+                  <img align="right" src="/img/townhouse2.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
                 </div>
             </div>
         </div>
