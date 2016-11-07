@@ -1,7 +1,5 @@
 Router.map ->
-  @route "profile",
-    path: "/profile"
-      
+
   @route "account",
     path: "/account"
 

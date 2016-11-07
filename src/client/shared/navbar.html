@@ -4,13 +4,17 @@
       <div class="container close-navbar">
         <div class="navbar-header">
           <input type="checkbox" id="sliding-menu-controller" class="hide">
-          <!-- <button class ="btn" onClick = "openNav()">open</button> -->
-          <label type = "button" class = "navbar-toggle2" onClick = "openNav()">
-            <span class = "fa fa-bars"></span>
-          </label>
+
           <label type="button" class="navbar-toggle" for="sliding-menu-controller">
             <span class="icon"></span>
           </label>
+          {{#if currentUser}}
+          <ul class = "nav navbar-nav navbar-right">
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'roomProfile');"><i style = "margin-right: 5px;" class = "fa fa-user"></i>Room Profile</a></li>
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'application');"><i  style = "margin-right: 5px;" class = "fa fa-file-text-o"></i>Application</a></li>
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'inbox');"><i style = "margin-right: 5px;" class = "fa fa-inbox"></i>Inbox</a></li>
+          </ul>
+          {{/if}}
           <div class="sliding-menu visible-xs">
             <div class="panel panel-default">
               {{#if User}}
