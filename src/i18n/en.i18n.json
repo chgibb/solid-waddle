@@ -1,10 +1,10 @@
 {
 
 	/*Config*/
-	"configName": "Solid Waddle",
-	"configTitle": "Make Room Reservations. Fast.",
-	"configSubtitle": "Create beautiful and functioning room reservations really quick",
-	
+	"configName": "Lakehead University Residence",
+	"configTitle": "Student at Lakehead University?",
+	"configSubtitle": "Planning to live On-Campus?",
+
 	/*Home*/
 	"getstarted": "Get Started",
 	"dashboard": "Go to dashboard",
@@ -17,17 +17,17 @@
 	"step_2_text": "Wait.",
 	"step_3": "Step 3",
 	"step_3_text": "Get Housed.",
-	"section_ipad_header": "A revolutionary product",
-	"section_ipad_text": "Do really cool stuff really quickly",
-	"section_ipad_btn": "Made by 4 dudes",
-	"final_text": "Your life will be instantly better.",
+	"section_ipad_header": "Lakehead University",
+	"section_ipad_text": "is home to one of the best campuses in Ontario",
+	"section_ipad_btn": "Click here to learn more",
+	"final_text": "We offer different types of rooms",
 	"final_cta": "Take a look",
 
 	/*Shared*/
 
 	"favorite": "Favorite",
 
-	 /*Navbar*/
+	/*Navbar*/
 	"admin": "Admin",
 	"profile": "Profile",
 	"account": "Account",
@@ -67,11 +67,11 @@
 	"postTitle": "Title",
 	"postContent": "Content",
 	"postPicture": "Picture",
-	// "uploadLabel": "Choose File"
+
 	"profilePicture": "Profile Picture"
 
 
-	
+
 
 
 }
