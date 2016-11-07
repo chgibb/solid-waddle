@@ -9,9 +9,7 @@ Router.map ->
       [
         subs.subscribe 'buildings'
         subs.subscribe 'rooms'
-        subs.subscribe 'posts'
-        subs.subscribe 'comments'
-        subs.subscribe 'attachments'
+        subs.subscribe 'applications'
       ]
     data: ->
       posts: Posts.find({},{sort: {createdAt: -1}}).fetch()

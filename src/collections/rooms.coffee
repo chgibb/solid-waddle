@@ -55,6 +55,9 @@ Schemas.Rooms = new SimpleSchema
 		autoform:
 			rows: 5
 
+	occupants:
+		type: String		
+
 	createdAt:
 		type: Date
 		autoValue: ->

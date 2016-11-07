@@ -29,6 +29,23 @@
 				{ label: 'Amenities', name: 'amenities'}
 			]
 
+		Applications:
+			color: 'purple'
+			icon: 'file-text'
+			routes:
+		        new:
+		        	waitOn: -> Meteor.subscribe('buildings');
+				view:
+	         		waitOn: -> Meteor.subscribe('buildings');
+		        edit:
+		        	waitOn: -> Meteor.subscribe('buildings');
+			tableColumns: [
+				{ label: 'Request By', name: 'request_by'}
+				{ label: 'Building', name: 'building_name'}
+				{ label: 'Room Number', name: 'room_number'}
+				{ label: 'Meal plan', name: 'meal_plan'}
+			]
+
 		Tickets:
 			color: 'red'
 			icon: 'comments'
