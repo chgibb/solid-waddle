@@ -34,5 +34,37 @@
 			icon: 'comments'
 	dashboard:
 		homeUrl: '/dashboard'
+		widgets:[
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Buildings'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Rooms'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Tickets'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Users'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			{
+			 template: 'adminMatchesPending'
+			 data:
+				 collection:'Users'
+				 class: 'col-lg-3 col-xs-6'
+			 }
+		]
 	autoForm:
 		omitFields: ['createdAt', 'updatedAt']

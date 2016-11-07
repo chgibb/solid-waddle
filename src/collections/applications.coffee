@@ -2,7 +2,7 @@
 
 Schemas.Application = new SimpleSchema
 
-	type:
+	room_type:
 		type: Number
 		optional: true
 		autoform:
@@ -19,6 +19,7 @@ Schemas.Application = new SimpleSchema
 		type: String
 		label: "Building Name"
 		optional: true
+		defaultValue: -1
 		autoform:
 			options: ->
 				_.map Buildings.find({}).fetch(), (building)->
@@ -28,14 +29,17 @@ Schemas.Application = new SimpleSchema
 	room_number:
 		type: Number
 		optional: true
+		defaultValue: -1
 
 	meal_plan:
 		type: Boolean
 		optional: true
+		defaultValue: false
 
-	fulfilled:
+	matched:
 		type: Boolean
-		autoValue: -> false
+		optional: true
+		defaultValue: false
 
 	createdAt:
 		type: Date
@@ -44,9 +48,3 @@ Schemas.Application = new SimpleSchema
 				new Date()
 
 Applications.attachSchema(Schemas.Applications)
-
-Applications.helpers
-	building: ->
-		building = buildings.find().fetch()
-	room: ->
-		room = rooms.find().fetch()

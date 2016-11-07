@@ -68,7 +68,6 @@ logging
 reload
 random
 insecure
-autopublish
 ejson
 spacebars
 check
