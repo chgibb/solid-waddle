@@ -4,19 +4,22 @@
       <div class="container close-navbar">
         <div class="navbar-header">
           <input type="checkbox" id="sliding-menu-controller" class="hide">
-          <!-- <button class ="btn" onClick = "openNav()">open</button> -->
-          <label type = "button" class = "navbar-toggle2" onClick = "openNav()">
-            <span class = "fa fa-bars"></span>
-          </label>
+
           <label type="button" class="navbar-toggle" for="sliding-menu-controller">
             <span class="icon"></span>
           </label>
+          {{#if currentUser}}
+          <ul class = "nav navbar-nav navbar-right">
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'roomProfile');"><i style = "margin-right: 5px;" class = "fa fa-user"></i>Room Profile</a></li>
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'application');"><i  style = "margin-right: 5px;" class = "fa fa-file-text-o"></i>Application</a></li>
+            <li><a href = "/dashboard" onClick = "Session.set('profileView', 'inbox');"><i style = "margin-right: 5px;" class = "fa fa-inbox"></i>Inbox</a></li>
+          </ul>
+          {{/if}}
           <div class="sliding-menu visible-xs">
             <div class="panel panel-default">
               {{#if User}}
                 <div class="panel-heading">{{niceName User._id}}</div>
                 <div class="list-group">
-                  <a class="list-group-item" href="{{pathFor 'profile'}}">{{_ "profile"}}</a>
                   <a class="list-group-item" href="{{pathFor 'account'}}">{{_ "account"}}</a>
                   <a class="list-group-item" href="{{pathFor 'notifications'}}">
                     {{#if notificationCount}}
@@ -39,9 +42,6 @@
                 <li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li>
               {{/if}}
               {{> userDropdown}}
-              <li class="visible-xs">
-                <a href="{{pathFor 'profile'}}" class="close-navbar">{{_ "edit_profile"}}</a>
-              </li>
               <li class="visible-xs">
                 <a class="close-navbar" href="/sign-out">{{_ "signout"}}</a>
               </li>

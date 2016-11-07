@@ -12,3 +12,6 @@ Meteor.publish 'buildings', ->
 
 Meteor.publish 'rooms', ->
 	Rooms.find()
+
+Meteor.publish 'applications', ->
+	Applications.find()
