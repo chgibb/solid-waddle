@@ -10,30 +10,28 @@ Schemas.Buildings = new SimpleSchema
 		autoform:
 			rows: 5
 
+	number_of_rooms:
+		type: Number
+
+	room_types:
+		type: String
+		optional: true,
+		autoform:
+		  type: "select-checkbox-inline",
+		  options: ->
+		  	[
+		      {label: "Basic Single", value: '1'},
+		      {label: "Single", value: '2'},
+			  {label: "Apartment", value: '3'},
+		      {label: "Townhouse", value: '4'}
+		    ];
+
+
 	createdAt:
 		type: Date
 		autoValue: ->
 			if this.isInsert
 				new Date()
-
-	updatedAt:
-		type:Date
-		optional:true
-		autoValue: ->
-			if this.isUpdate
-				new Date()
-
-	owner:
-		type: String
-		regEx: SimpleSchema.RegEx.Id
-		autoValue: ->
-			if this.isInsert
-				Meteor.userId()
-		autoform:
-			options: ->
-				_.map Meteor.users.find().fetch(), (user)->
-					label: user.emails[0].address
-					value: user._id
 
 Buildings.attachSchema(Schemas.Buildings)
 

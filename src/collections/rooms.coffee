@@ -2,30 +2,60 @@
 
 Schemas.Rooms = new SimpleSchema
 	building_name:
-		type:String
-		max: 20
+		type: String
+		label: "Building Name"
+		autoform:
+			options: ->
+				_.map Buildings.find({}).fetch(), (building)->
+					label: building.name
+					value: building._id
 
-	number:
+	room_number:
 		type: Number
 
 	type:
-		type: String
+		type: Number
 		autoform:
-			rows: 1
+		  type: "select-radio-inline",
+		  options: ->
+		  	[
+		      {label: "Basic Single", value: 1},
+		      {label: "Single", value: 2},
+			  {label: "Apartment", value: 3},
+		      {label: "Townhouse", value: 4}
+		    ];
 
 	capacity:
 		type: Number
-
-	meal_plan:
-		type: Boolean
-
-	description:
-		type: String
+		autoform:
+		  type: "select-radio-inline",
+		  options: ->
+		  	[
+		      {label: "1", value: 1},
+		      {label: "2", value: 2},
+		    ];
 
 	amenities:
 		type: String
+		optional: true,
 		autoform:
-			 rows: 5
+			type: "select-checkbox-inline",
+			options: ->
+				[
+					{label: "Microwave", value: 1},
+					{label: "Fridge", value: 2},
+					{label: "Book Shelves", value: 3},
+					{label: "Fridge", value: 4},
+					{label: "Surge Protector", value: 5}
+				];
+
+	description:
+		type: String
+		autoform:
+			rows: 5
+
+	meal_plan:
+		type: Boolean
 
 	createdAt:
 		type: Date
@@ -33,31 +63,9 @@ Schemas.Rooms = new SimpleSchema
 			if this.isInsert
 				new Date()
 
-	updatedAt:
-		type:Date
-		optional:true
-		autoValue: ->
-			if this.isUpdate
-				new Date()
-
-	owner:
-		type: String
-		regEx: SimpleSchema.RegEx.Id
-		autoValue: ->
-			if this.isInsert
-				Meteor.userId()
-		autoform:
-			options: ->
-				_.map Meteor.users.find().fetch(), (user)->
-					label: user.emails[0].address
-					value: user._id
 
 Rooms.attachSchema(Schemas.Rooms)
 
 Rooms.helpers
-	author: ->
-		user = Meteor.users.findOne(@owner)
-		if user?.profile?.firstName? and user?.profile?.lastName
-			user.profile.firstName + ' ' + user.profile.lastName
-		else
-			user?.emails?[0].address
+	building: ->
+		building = buildings.find().fetch()
