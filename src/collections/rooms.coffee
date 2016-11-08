@@ -22,7 +22,7 @@ Schemas.Rooms = new SimpleSchema
 		  	[
 		      {label: "Basic Single", value: 1},
 		      {label: "Single", value: 2},
-			  {label: "Apartment", value: 3},
+			  	{label: "Apartment", value: 3},
 		      {label: "Townhouse", value: 4}
 		    ];
 
@@ -56,7 +56,7 @@ Schemas.Rooms = new SimpleSchema
 			rows: 5
 
 	occupants:
-		type: String		
+		type: String
 
 	createdAt:
 		type: Date

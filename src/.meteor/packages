@@ -67,6 +67,7 @@ tracker
 logging
 reload
 random
+insecure
 ejson
 spacebars
 check

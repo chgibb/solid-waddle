@@ -33,14 +33,17 @@ Schemas.UserProfile = new SimpleSchema(
   warnings:
     type: String
     optional: true
-    autoform: {
-      type: "hidden",
+    autoform:
+      type: "hidden"
       label: false
-    }
+<<<<<<< HEAD
 
   mealPlan:
     type: Boolean
     optional: false
+=======
+    }
+>>>>>>> applications
 )
 
 Schemas.User = new SimpleSchema(
@@ -67,6 +70,10 @@ Schemas.User = new SimpleSchema(
 
   profile:
     type: Schemas.UserProfile
+    optional: true
+
+  application:
+    type: Schemas.Application
     optional: true
 
   services:

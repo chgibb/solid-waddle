@@ -31,27 +31,42 @@
 				{ label: 'Amenities', name: 'amenities'}
 			]
 
-		Applications:
-			color: 'purple'
-			icon: 'file-text'
-			routes:
-		        new:
-		        	waitOn: -> Meteor.subscribe('buildings');
-				view:
-	         		waitOn: -> Meteor.subscribe('buildings');
-		        edit:
-		        	waitOn: -> Meteor.subscribe('buildings');
-			tableColumns: [
-				{ label: 'Request By', name: 'request_by'}
-				{ label: 'Building', name: 'building_name'}
-				{ label: 'Room Number', name: 'room_number'}
-				{ label: 'Meal plan', name: 'meal_plan'}
-			]
-
 		Tickets:
 			color: 'red'
 			icon: 'comments'
 	dashboard:
 		homeUrl: '/dashboard'
+		widgets:[
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Buildings'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Rooms'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Tickets'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Users'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			{
+			 template: 'adminMatchesPending'
+			 data:
+				 collection:'Users'
+				 class: 'col-lg-3 col-xs-6'
+			 }
+		]
 	autoForm:
 		omitFields: ['createdAt', 'updatedAt']

@@ -1,17 +1,19 @@
 @Applications = new Meteor.Collection('applications');
 
 Schemas.Application = new SimpleSchema
-	request_by:
-		type: String
-		regEx: SimpleSchema.RegEx.Id
-		autoValue: ->
-			if this.isInsert
-				Meteor.userId()
+
+	room_type:
+		type: Number
+		optional: true
 		autoform:
-			options: ->
-				_.map Meteor.users.find().fetch(), (user)->
-					label: user.emails[0].address
-					value: user._id
+		  type: "select-radio-inline",
+		  options: ->
+		  	[
+		      {label: "Basic Single", value: 1},
+		      {label: "Single", value: 2},
+			  {label: "Apartment", value: 3},
+		      {label: "Townhouse", value: 4}
+		    ];
 
 	building_name:
 		type: String
@@ -26,14 +28,17 @@ Schemas.Application = new SimpleSchema
 	room_number:
 		type: Number
 		optional: true
+		defaultValue: -1
 
 	meal_plan:
 		type: Boolean
 		optional: true
+		defaultValue: false
 
-	fulfilled:
+	matched:
 		type: Boolean
-		autoValue: -> false
+		optional: true
+		defaultValue: false
 
 	createdAt:
 		type: Date
@@ -41,11 +46,4 @@ Schemas.Application = new SimpleSchema
 			if this.isInsert
 				new Date()
 
-
 Applications.attachSchema(Schemas.Applications)
-
-Applications.helpers
-	building: ->
-		building = buildings.find().fetch()
-	room: ->
-		room = rooms.find().fetch()
