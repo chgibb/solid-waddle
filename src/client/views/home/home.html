@@ -25,8 +25,8 @@
             <div class="intro-well wow animated bounceIn">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12">
-                        <h1>{{Config.title}}</h1>
-                        <h2 class="hidden-xs">{{Config.subtitle}}</h2>
+                        <h1>{{Config.title}}</h1><br/>
+                        <h2 class="hidden-xs">Less Unhoused Residents, More Studying</h2>
                         {{#if User}}
                         <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
                         {{else}}
@@ -37,51 +37,58 @@
             </div>
         </div>
     </section>
-    <section id="how-it-works" class="text-center">
-        <h2><b>Why stay on Residence</b></h2>
-        <div class="container wow fadeIn animated">
-            <div class="row col-md-12">
-                <h3>{{_ "heading1"}}</h3>
-                <h4>{{_ "subHeading1"}}</h4>
-                <hr width="50%">
-                <h3>{{_ "heading2"}}</h3>
-                <h4>{{_ "subHeading2"}}</h4>
-                <hr width="50%">
-                <h3>{{_ "heading3"}}</h3>
-                <h4>{{_ "subHeading3"}}</h4>
-                <hr width="50%">
+    <section class = "text-center">
+      <div class="container">
+        <div class="row" id="icon-row">
+            <br>
+            <h2><b>{{_ "how"}}</b></h2><br/>
+            <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.4s">
+                <div class="iconbox">
+                  <!-- <i class="fa fa-file-text-o-3x" aria-hidden="true"></i> -->
+                  <i class="fa fa-file-text-o fa-3x"></i>
+                </div>
+                <h2 class="icntitle">1. {{_ "step_1"}}</h2>
+                <p class="icnp">{{_ "step_1_text"}}</p>
+            </div>
+            <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
+                <div class="iconbox">
+                    <i class="fa fa-clock-o fa-3x"></i>
+                </div>
+                <h2 class="icntitle">2. {{_ "step_2"}}</h2>
+                <p class="icnp">{{_ "step_2_text"}}</p>
+            </div>
+            <div class="col-md-4 wow fadeInUp animated" data-wow-delay="1.2s">
+                <div class="iconbox">
+                    <i class="fa fa-building fa-3x"></i>
+                </div>
+                <h2 class="icntitle">3. {{_ "step_3"}}</h2>
+                <p class="icnp">{{_ "step_3_text"}}</p>
             </div>
         </div>
-        <div class="container">
-          <div class="row" id="icon-row">
-              <br>
-              <h2><b>{{_ "how"}}</b></h2>
-              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.4s">
-                  <div class="iconbox">
-                    <!-- <i class="fa fa-file-text-o-3x" aria-hidden="true"></i> -->
-                    <i class="fa fa-file-text-o fa-3x"></i>
-                  </div>
-                  <h2 class="icntitle">1. {{_ "step_1"}}</h2>
-                  <p class="icnp">{{_ "step_1_text"}}</p>
-              </div>
-              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
-                  <div class="iconbox">
-                      <i class="fa fa-clock-o fa-3x"></i>
-                  </div>
-                  <h2 class="icntitle">2. {{_ "step_2"}}</h2>
-                  <p class="icnp">{{_ "step_2_text"}}</p>
-              </div>
-              <div class="col-md-4 wow fadeInUp animated" data-wow-delay="1.2s">
-                  <div class="iconbox">
-                      <i class="fa fa-building fa-3x"></i>
-                  </div>
-                  <h2 class="icntitle">3. {{_ "step_3"}}</h2>
-                  <p class="icnp">{{_ "step_3_text"}}</p>
-              </div>
+      </div>
+  </section>
+
+  <section id="how-it-works" class="text-center colored" style = "color: #505050;">
+      <h2><b>Why stay on Residence</b></h2>
+      <div class="container wow fadeIn animated">
+        <div class = "row">
+          <div class = "col-md-4  wow fadeInLeft animated">
+            <h3>{{_ "heading1"}}</h3>
+            <h4>{{_ "subHeading1"}}</h4>
+          </div>
+          <div class = "col-md-4  wow fadeInDown animated">
+            <h3>{{_ "heading2"}}</h3>
+            <h4>{{_ "subHeading2"}}</h4>
+          </div>
+          <div class = "col-md-4  wow fadeInRight animated">
+            <h3>{{_ "heading3"}}</h3>
+            <h4>{{_ "subHeading3"}}</h4>
           </div>
         </div>
+      </div>
     </section>
-    <section id="ipad" class="colored text-center">
+
+    <section id="ipad" class="text-center">
         <div class="container">
           <div class="col-sm-4">
               <h3>{{_ "section_ipad_header"}}</h3>
@@ -97,8 +104,8 @@
           </div>
         </div>
     </section>
-    <section id="carousel">
-      <h2 style="text-align: center"><b>We have an array of room types to choose from</b></h2>
+    <section id="carousel" class = "text-center">
+      <h2 style="text-align: center"><b>Room Choices</b></h2><br/>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -126,7 +133,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <img align="center" src="/img/basic.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+              <img align="center" src="/img/basic.jpg" height="70%" width="70%" class="wow animated fadeIn" data-wow-delay="1s">
           </div>
         </div>
 
@@ -146,7 +153,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <img align="center" src="/img/single.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+              <img align="center" src="/img/single.jpg" height="70%" width="70%" class="wow animated fadeIn" data-wow-delay="1s">
             </div>
           </div>
 
@@ -166,7 +173,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <img align="center" src="/img/apt.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+              <img align="center" src="/img/apt.jpg" height="70%" width="70%" class="wow animated fadeIn" data-wow-delay="1s">
             </div>
           </div>
 
@@ -185,7 +192,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <img align="center" src="/img/townhouse2.jpg" height="70%" width="70%" class="wow animated fadeInRight" data-wow-delay="1s">
+              <img align="center" src="/img/townhouse2.jpg" height="70%" width="70%" class="wow animated fadeIn" data-wow-delay="1s">
             </div>
           </div>
         </div>
