@@ -1,3 +1,15 @@
 <template name = "inbox">
-  <h1>Inbox</h1>
+  <div class = "col-md-9">
+    <h1>Announcements</h1>
+      <div class = "announcement">
+        {{#each announcement}}
+        <div class = "singleAnnouncement">
+          <h3>{{title}}</h3>
+          <h4>{{content}}</h4>
+        </div>
+        {{/each}}
+      </div>
+    <h1>Create a Ticket</h1>
+      {{> quickForm collection="Tickets" id="createTicket" type="insert" omitFields = "senderID, roomID, recipientID"}}
+  </div>
 </template>

@@ -34,6 +34,12 @@
 		Tickets:
 			color: 'red'
 			icon: 'comments'
+			tableColumns: [
+				{label: 'Ticket Sender', name: 'senderID'}
+				{label: 'Title', name: 'title'}
+				{label: 'Body', name: 'content'}
+				{label: 'Urgency', name: 'urgencyRating'}
+			]
 	dashboard:
 		homeUrl: '/dashboard'
 		widgets:[

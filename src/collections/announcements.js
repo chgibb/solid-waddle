@@ -15,7 +15,8 @@ Announcements.allow({
 AnnouncementsSchema = new SimpleSchema({
   roomID: {
     type: String,
-    label: "Room ID"
+    label: "Room ID",
+    optional: true
   },
   createdBy:{
     type: String,
@@ -27,7 +28,10 @@ AnnouncementsSchema = new SimpleSchema({
   },
   content: {
     type: String,
-    label: "Announcement Body"
+    label: "Announcement Body",
+    autoform: {
+      rows: 10
+    }
   }
 });
 
