@@ -36,16 +36,11 @@ Schemas.UserProfile = new SimpleSchema(
     autoform:
       type: "hidden"
       label: false
-<<<<<<< HEAD
 
   mealPlan:
     type: Boolean
     optional: false
-=======
-    }
->>>>>>> applications
 )
-
 Schemas.User = new SimpleSchema(
 
   username:
