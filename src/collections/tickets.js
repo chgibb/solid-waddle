@@ -36,7 +36,10 @@ TicketsSchema = new SimpleSchema({
   content: {
     type:String,
     label: "Message body",
-    min: 1
+    min: 1,
+    autoform: {
+      rows: 10
+    }
   },
   urgencyRating:{
     type: Number,
