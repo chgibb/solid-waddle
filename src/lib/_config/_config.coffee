@@ -4,7 +4,7 @@
 @Config =
 
 	# Basic Details
-	name: 'Solid Waddle'
+	name: 'LURMS+'
 	title: ->
 			TAPi18n.__ 'configTitle'
 	subtitle: ->
@@ -21,7 +21,7 @@
 
 	# Username - if true, users are forced to set a username
 	username: false
-	
+
 	# Localisation
 	defaultLanguage: 'en'
 	dateFormat: 'D/M/YYYY'

@@ -22,7 +22,7 @@ Schemas.Rooms = new SimpleSchema
 		  	[
 		      {label: "Basic Single", value: 1},
 		      {label: "Single", value: 2},
-			  {label: "Apartment", value: 3},
+			  	{label: "Apartment", value: 3},
 		      {label: "Townhouse", value: 4}
 		    ];
 
@@ -37,23 +37,26 @@ Schemas.Rooms = new SimpleSchema
 		    ];
 
 	amenities:
-		type: Number
+		type: [String]
 		optional: true,
 		autoform:
 			type: "select-checkbox-inline",
 			options: ->
 				[
-					{label: "Microwave", value: 1},
-					{label: "Fridge", value: 2},
-					{label: "Book Shelves", value: 3},
-					{label: "Fridge", value: 4},
-					{label: "Surge Protector", value: 5}
+					{label: "Microwave", value: "Microwave"},
+					{label: "Fridge", value: "Fridge"},
+					{label: "Book Shelves", value: "Shelves"},
+					{label: "Fridge", value: "Fridge"},
+					{label: "Surge Protector", value: "Surge Protector"}
 				];
 
 	description:
 		type: String
 		autoform:
 			rows: 5
+
+	occupants:
+		type: String
 
 	createdAt:
 		type: Date

@@ -2,12 +2,7 @@
   <h1>Application</h1>
   <div class="container">
     <div class="row">
-      {{#autoForm id="updateProfile" collection=Users doc=User type="update"}}
-      <div class="col-md-8">
-        {{> afQuickField name='profile' omitFields="profile.picture"}}
-        <button type="submit" class="btn btn-primary">{{_ "update"}}</button>
-      </div>
-      {{/autoForm}}
+      {{> quickForm collection="Application" id="insertApplication" type = "insert" omitFields ="building_name, room_number, matched, createdAt"}}
     </div>
   </div>
 </template>
