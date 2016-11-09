@@ -5,7 +5,7 @@ Schemas.Application = new SimpleSchema
 		type: String
 		regEx: SimpleSchema.RegEx.Id
 		autoform:
-			type: hidden
+			type: "hidden"
 		autoValue: ->
 			if this.isInsert
 				Meteor.userId()
