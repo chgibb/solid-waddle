@@ -42,6 +42,7 @@ Schemas.Application = new SimpleSchema
 
 	createdAt:
 		type: Date
+		optional: true
 		autoValue: ->
 			if this.isInsert
 				new Date()

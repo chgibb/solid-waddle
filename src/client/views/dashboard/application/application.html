@@ -2,14 +2,7 @@
   <h1>Application</h1>
   <div class="container">
     <div class="row">
-      {{#autoForm id="updateProfile" collection=Application doc=User type="update"}}
-      <div class="col-md-8">
-        {{> afQuickField name='application'}}
-        <!-- <span><strong>Meal Plan</strong>{{> afQuickField name='mealPlan' label = "MealPlan" type='boolean-checkbox'}} </span>
-        {{> afQuickField name = 'roomType' label="Room Type" type ='select-radio-inline' options=roomTypes}} -->
-        <button type="submit" class="btn btn-primary">{{_ "update"}}</button>
-      </div>
-      {{/autoForm}}
+      {{> quickForm collection="Application" id="insertApplication" type = "insert" omitFields ="building_name, room_number, matched, createdAt"}}
     </div>
   </div>
 </template>
