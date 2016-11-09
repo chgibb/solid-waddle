@@ -40,6 +40,18 @@ Schemas.Application = new SimpleSchema
 		optional: true
 		defaultValue: false
 
+	image:
+		type: String
+		autoform:
+			type: 'imageGallery'
+			options: ->
+  		  	[
+  		      {_id: "1", url: "/img/basic.jpg"},
+  		      {_id: "2", url: "/img/single.jpg"},
+			#   {_id: "3", url: "/img/townhouse2.jpg"},
+			#   {_id: "4", url: "/img/apt.jpg"}
+  		    ];
+
 	createdAt:
 		type: Date
 		optional: true
