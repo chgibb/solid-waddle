@@ -56,7 +56,8 @@ Schemas.User = new SimpleSchema(
 
   "emails.$.address":
     type: String
-    regEx: SimpleSchema.RegEx.Email
+    regEx: /.*@lakeheadu.ca$/
+
 
   "emails.$.verified":
     type: Boolean
