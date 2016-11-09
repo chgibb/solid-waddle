@@ -1,3 +1,4 @@
 <template name = "inbox">
-  <h1>Inbox</h1>
+  <h1>Create a Ticket</h1>
+    {{> quickForm collection="Tickets" id="createTicket" type="insert" omitFields = "senderID, roomID, recipientID"}}
 </template>

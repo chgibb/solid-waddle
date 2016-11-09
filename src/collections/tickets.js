@@ -15,7 +15,8 @@ Tickets.allow({
 TicketsSchema = new SimpleSchema({
   roomID: {
     type: String,
-    label: "Room ID"
+    label: "Room ID",
+    optional: true
   },
   senderID: {
     type: String,
@@ -25,7 +26,8 @@ TicketsSchema = new SimpleSchema({
   },
   recipientID: {
     type: String,
-    label: "Recipient ID"
+    label: "Recipient ID",
+    optional: true
   },
   title: {
     type: String,
