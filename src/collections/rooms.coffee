@@ -8,7 +8,7 @@ Schemas.Rooms = new SimpleSchema
 			options: ->
 				_.map Buildings.find({}).fetch(), (building)->
 					label: building.name
-					value: building._id
+					value: building.name
 
 	room_number:
 		type: Number
@@ -57,6 +57,8 @@ Schemas.Rooms = new SimpleSchema
 
 	occupants:
 		type: String
+		optional: true
+
 
 	createdAt:
 		type: Date
