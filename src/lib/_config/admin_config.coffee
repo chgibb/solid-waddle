@@ -35,9 +35,10 @@
 			color: 'purple'
 			icon: 'file-text-o'
 			tableColumns: [
+				{ label: 'Applicant', name: 'applicant'}
 				{ label: 'Room Number', name: 'room_number'}
 				{ label: 'Building', name: 'building_name'}
-				{ label: 'Type', name: 'room_type'}
+				{ label: 'Room Type', name: 'room_Type'}
 				]
 
 		Tickets:
