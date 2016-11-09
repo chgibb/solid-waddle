@@ -28,9 +28,6 @@ yogiben:autoform-map
 multiply:iron-router-progress
 manuelschoebel:ms-seo
 spiderable
-accounts-facebook
-accounts-google
-accounts-twitter
 accounts-ui
 jparker:gravatar
 tap:i18n
@@ -75,3 +72,5 @@ standard-minifier-css
 standard-minifier-js
 meteortoys:allthings
 autopublish
+rikonor:autoform-image-gallery
+reactive-var

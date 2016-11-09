@@ -1,3 +1,15 @@
 <template name = "roomProfile">
-  <h1>Room Profile</h1>
-</template>
+  <h1>Personal Profile</h1>
+    <div class="container">
+      <div class="row">
+        {{#autoForm id="updateProfile" collection=Users doc=User type="update"}}
+        <div class="col-md-8">
+          {{> afQuickField name='profile' omitFields="profile.picture"}}
+          <!-- <span><strong>Meal Plan</strong>{{> afQuickField name='mealPlan' label = "MealPlan" type='boolean-checkbox'}} </span>
+          {{> afQuickField name = 'roomType' label="Room Type" type ='select-radio-inline' options=roomTypes}} -->
+          <button type="submit" class="btn btn-primary">{{_ "update"}}</button>
+        </div>
+        {{/autoForm}}
+      </div>
+    </div>
+  </template>
