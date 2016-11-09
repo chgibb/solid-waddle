@@ -41,6 +41,7 @@ Schemas.UserProfile = new SimpleSchema(
     type: Boolean
     optional: false
 )
+
 Schemas.User = new SimpleSchema(
 
   username:
@@ -67,9 +68,9 @@ Schemas.User = new SimpleSchema(
     type: Schemas.UserProfile
     optional: true
 
-  application:
-    type: Schemas.Application
-    optional: true
+  # application:
+  #   type: Schemas.Application
+  #   optional: true
 
   services:
     type: Object

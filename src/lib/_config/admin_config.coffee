@@ -31,6 +31,15 @@
 				{ label: 'Amenities', name: 'amenities'}
 			]
 
+		Application:
+			color: 'purple'
+			icon: 'file-text-o'
+			tableColumns: [
+				{ label: 'Room Number', name: 'room_number'}
+				{ label: 'Building', name: 'building_name'}
+				{ label: 'Type', name: 'room_type'}
+				]
+
 		Tickets:
 			color: 'red'
 			icon: 'comments'
@@ -65,6 +74,12 @@
             template: 'adminCollectionWidget'
             data:
               collection: 'Users'
+              class: 'col-lg-3 col-xs-6'
+		  	 }
+			 {
+            template: 'adminCollectionWidget'
+            data:
+              collection: 'Application'
               class: 'col-lg-3 col-xs-6'
 		  	 }
 			{

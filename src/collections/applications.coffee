@@ -1,4 +1,4 @@
-@Applications = new Meteor.Collection('applications');
+@Application = new Meteor.Collection('application');
 
 Schemas.Application = new SimpleSchema
 
@@ -46,4 +46,4 @@ Schemas.Application = new SimpleSchema
 			if this.isInsert
 				new Date()
 
-Applications.attachSchema(Schemas.Applications)
+Application.attachSchema(Schemas.Application)
