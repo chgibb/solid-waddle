@@ -41,10 +41,10 @@ Schemas.Application = new SimpleSchema
 			type: 'imageGallery'
 			options: ->
   		  	[
-  		      {_id: "Basic", url: "/img/basic-small.jpg"},
-  		      {_id: "Basic Single", url: "/img/single-small.jpg"},
-			      {_id: "Townhouse", url: "/img/townhouse2-small.jpg"},
-            {_id: "Apartment", url: "/img/apt-small.jpg"}
+  		      {_id: "1", url: "img/basic-small.jpg"},
+              {_id: "2", url: "/img/single-small.jpg"},
+                 {_id: "3", url: "/img/townhouse2-small.jpg"},
+          {_id: "4", url: "/img/apt-small.jpg"}
   		    ];
 
 	meal_plan:
