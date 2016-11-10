@@ -15,3 +15,6 @@ Meteor.publish 'rooms', ->
 
 Meteor.publish 'application', ->
 	Application.find()
+
+Meteor.publish 'formParameters', ->
+	FormParameters.find()

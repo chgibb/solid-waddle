@@ -2,6 +2,15 @@
 	name: Config.name
 	userSchema: null
 	collections:
+		FormParameters:
+			color: 'pink'
+			icon: 'gear'
+			tableColumns: [
+				{ label: 'Amenities', name: 'amenities'}
+				{ label: 'Room Capacities', name: 'room_capacities'}
+				{ label: 'Room Types', name:'room_types.type'}
+			]
+
 		Buildings:
 			color: 'yellow'
 			icon: 'building'

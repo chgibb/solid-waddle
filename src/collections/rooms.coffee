@@ -41,14 +41,11 @@ Schemas.Rooms = new SimpleSchema
 		optional: true,
 		autoform:
 			type: "select-checkbox-inline",
-			options: ->
-				[
-					{label: "Microwave", value: "Microwave"},
-					{label: "Fridge", value: "Fridge"},
-					{label: "Book Shelves", value: "Shelves"},
-					{label: "Fridge", value: "Fridge"},
-					{label: "Surge Protector", value: "Surge Protector"}
-				];
+			autoform:
+				options: ->
+					_.map formParameters.find({}).fetch(), (amens)->
+						label: amens.amenities
+						value: amens.amenities
 
 	description:
 		type: String
