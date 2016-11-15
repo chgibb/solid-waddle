@@ -8,6 +8,20 @@
 								<h3 class="panel-title">{{_ "account_details"}}</h3>
 						  </div>
 						  <div class="panel-body">
+								 {{> paypalCreditCardForm }}
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+								<h3 class="panel-title">{{_ "account_details"}}</h3>
+						  </div>
+						  <div class="panel-body">
 								{{> updatePassword}}
 						  </div>
 					</div>
@@ -44,7 +58,6 @@
 		</div>
 	</div>
 </template>
-
 <template name="updatePassword">
   <div class="template-update-password">
   	{{#autoForm schema=Schemas.updatePassword id="updatePassword"}}
@@ -60,7 +73,6 @@
   	{{/autoForm}}
   </div>
 </template>
-
 <template name="setUserName">
 	<div class="template-set-username">
 		<div class="container">
