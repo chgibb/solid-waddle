@@ -1,5 +1,5 @@
 #!/bin/bash
-kill $(ps aux | grep '[b]ash [r]unLurms.[b]ash' | awk '{print $2}')
+kill $(ps aux | grep '[r]unLurms.[b]ash' | awk '{print $2}')
 kill $(ps aux | grep '[me]eteor' | awk '{print $2}')
 kill $(ps aux | grep '[me]eteor' | awk '{print $2}')
 kill $(ps aux | grep '[me]eteor' | awk '{print $2}')
