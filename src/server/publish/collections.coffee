@@ -15,3 +15,9 @@ Meteor.publish 'rooms', ->
 
 Meteor.publish 'application', ->
 	Application.find()
+
+Meteor.publish 'appliedapplication', ->
+	Application.findOne({applicant: Meteor.userId()})
+
+Meteor.publish 'matchedapplication', ->
+	Application.findOne()
