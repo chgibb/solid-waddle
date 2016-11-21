@@ -18,11 +18,13 @@ Meteor.Paypal.config({
     },
     function(error, results){
       if(error)
-      {}
+      {
+          console.log(error);
+      }
         //Deal with Error
       else
       {
-          alert("Successfully submitted");
+          console.log("Successfully submitted");
       }
         //results contains:
         //  saved (true or false)
