@@ -1,19 +1,3 @@
-@RoomTypesInfo = new Meteor.Collection('roomTypes');
-
-Schemas.RoomTypesInfo = new SimpleSchema
-	type:
-		type: String
-		optional: true
-
-	room_img:
-      type: String
-      optional:true
-      label: 'Room picture'
-      autoform:
-        afFieldInput:
-          type: 'fileUpload'
-          collection: 'RoomPictures'
-
 @FormParameters = new Meteor.Collection('formParameters');
 
 Schemas.FormParameters = new SimpleSchema
@@ -26,7 +10,7 @@ Schemas.FormParameters = new SimpleSchema
 		optional: true
 
 	room_types:
-		type: [Schemas.RoomTypesInfo]
+		type: [String]
 		optional: true
 
 	createdAt:
@@ -47,5 +31,6 @@ Schemas.FormParameters = new SimpleSchema
 FormParameters.attachSchema(Schemas.FormParameters)
 
 FormParameters.helpers
-	roomInfo: ->  RoomTypesInfo.find({}).fetch()
-	console.log(FormParameters.room_types)
+	roomInfo: ->
+		cursor = FormParameters.find({_id: this._id});
+		console.log(@cursor.next());

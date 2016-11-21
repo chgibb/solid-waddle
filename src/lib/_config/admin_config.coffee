@@ -8,7 +8,7 @@
 			tableColumns: [
 				{ label: 'Amenities', name: 'amenities'}
 				{ label: 'Room Capacities', name: 'room_capacities'}
-				{ label: 'Room Types', name:'roomInfo()'}
+				{ label: 'Room Types', name:'room_types'}
 			]
 
 		Buildings:
