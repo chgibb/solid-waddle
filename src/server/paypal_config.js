@@ -21,7 +21,9 @@ Meteor.Paypal.config({
       {}
         //Deal with Error
       else
-      {}
+      {
+          alert("Successfully submitted");
+      }
         //results contains:
         //  saved (true or false)
         //  if false: "error" contains the reasons for failure
