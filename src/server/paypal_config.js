@@ -18,8 +18,10 @@ Meteor.Paypal.config({
     },
     function(error, results){
       if(error)
+      {}
         //Deal with Error
       else
+      {}
         //results contains:
         //  saved (true or false)
         //  if false: "error" contains the reasons for failure
