@@ -50,6 +50,15 @@
 				{label: 'Body', name: 'content'}
 				{label: 'Urgency', name: 'urgencyRating'}
 			]
+
+		Announcements:
+			color: 'orange'
+			icon: 'exclamation'
+			tableColumns: [
+				{label: 'Announcement Title', name: 'title'}
+				{label: 'Announcement Content', name: 'Content'}
+			]
+
 	dashboard:
 		homeUrl: '/dashboard'
 		# widgets:[
