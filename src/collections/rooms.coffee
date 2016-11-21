@@ -37,15 +37,16 @@ Schemas.Rooms = new SimpleSchema
 		    ];
 
 	amenities:
-		type: [String]
+		type: String
 		optional: true,
 		autoform:
 			type: "select-checkbox-inline",
 			autoform:
 				options: ->
-					_.map formParameters.find({}).fetch(), (amens)->
-						label: amens.amenities
-						value: amens.amenities
+					_.map formParameters.find({}).fetch(), (amenities)->
+						console.log(amenities)
+						label: amenities
+						value: amenities
 
 	description:
 		type: String
@@ -69,3 +70,6 @@ Rooms.attachSchema(Schemas.Rooms)
 Rooms.helpers
 	building: ->
 		building = buildings.find().fetch()
+
+	amenities: ->
+		amenities = formParameters.find().fetch()

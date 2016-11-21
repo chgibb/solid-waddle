@@ -28,12 +28,6 @@ Schemas.FormParameters = new SimpleSchema
 	room_types:
 		type: [Schemas.RoomTypesInfo]
 		optional: true
-		# autoform:
-		# 	options: ->
-		# 		_.map RoomTypesInfo.find({}).fetch(), (room)->
-		# 			label: room.type
-		# 			value: room.type
-
 
 	createdAt:
 		type: Date
@@ -53,4 +47,5 @@ Schemas.FormParameters = new SimpleSchema
 FormParameters.attachSchema(Schemas.FormParameters)
 
 FormParameters.helpers
-	roomInfo: ->  FormParameters.pick('room_types', 'room_types.$');
+	roomInfo: ->  RoomTypesInfo.find({}).fetch()
+	console.log(FormParameters.room_types)
