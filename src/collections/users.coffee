@@ -20,11 +20,22 @@ Schemas.UserProfile = new SimpleSchema(
   sex:
     type: String
     optional: false
+    autoform:
+        options: -> [
+            {label: "M", value: "M"},
+            {label: "F", value: "F"}
+        ]
 
   yearLevel:
     type: Number
     optional: false
-    min: 1
+    autoform:
+        options: -> [
+            {label: "First", value: 1},
+            {label: "Second", value: 2},
+            {label: "Third", value: 3},
+            {label: "Fourth", value: 4}
+        ]
 
   program:
     type: String
