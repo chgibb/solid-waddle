@@ -6,7 +6,11 @@
 				</div>
 				<div class="col-md-9">
 					{{#if sessionOpen 'roomProfile'}}
-						{{> roomProfile}}
+						{{#if sessionOpen 'appliedapplication'}}
+							{{> appliedapplication}}
+						{{else}}
+							{{> roomProfile}}
+						{{/if}}
 					{{else}}
 						{{#if sessionOpen 'application'}}
 
