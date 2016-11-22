@@ -8,7 +8,11 @@
 			tableColumns: [
 				{ label: 'Amenities', name: 'amenities'}
 				{ label: 'Room Capacities', name: 'room_capacities'}
+<<<<<<< HEAD
 				{ label: 'Room Types', name:'roomInfo()'}
+=======
+				{ label: 'Room Types', name:'room_types'}
+>>>>>>> master
 			]
 
 		Buildings:
@@ -23,13 +27,6 @@
 		Rooms:
 			color: 'green'
 			icon: 'bed'
-			routes:
-		        new:
-		        	waitOn: -> Meteor.subscribe('buildings');
-				view:
-	         		waitOn: -> Meteor.subscribe('buildings');
-		        edit:
-		        	waitOn: -> Meteor.subscribe('buildings');
 			tableColumns: [
 				{ label: 'Room Number', name: 'room_number'}
 				{ label: 'Building', name: 'building_name'}
@@ -59,45 +56,17 @@
 				{label: 'Body', name: 'content'}
 				{label: 'Urgency', name: 'urgencyRating'}
 			]
+
+		Announcements:
+			color: 'orange'
+			icon: 'exclamation'
+			tableColumns: [
+				{label: 'Announcement Title', name: 'title'}
+				{label: 'Announcement Content', name: 'Content'}
+			]
+
 	dashboard:
 		homeUrl: '/dashboard'
-		# widgets:[
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Buildings'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Rooms'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Tickets'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Users'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Application'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	{
-		# 	 template: 'adminMatchesPending'
-		# 	 data:
-		# 		 collection:'Users'
-		# 		 class: 'col-lg-3 col-xs-6'
-		# 	 }
-		# ]
+		
 	autoForm:
 		omitFields: ['createdAt', 'updatedAt']

@@ -19,3 +19,18 @@ Template.account.events
 Template.setUserName.helpers
 	user: ->
 		Meteor.user()
+
+
+Template.paypalCreditCardForm.events 'submit #paypal-payment-form': (evt, tmp) ->
+  evt.preventDefault()
+  card_data = Template.paypalCreditCardForm.card_data()
+  Meteor.Paypal.purchase card_data, {
+    total: '100.50'
+    currency: 'USD'
+  }, (err, results) ->
+    if err
+      console.error err
+    else
+      console.log results
+    return
+  return

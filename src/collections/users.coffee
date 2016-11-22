@@ -36,7 +36,10 @@ Schemas.UserProfile = new SimpleSchema(
             {label: "Third", value: 3},
             {label: "Fourth", value: 4}
         ]
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
   program:
     type: String

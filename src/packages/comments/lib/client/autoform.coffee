@@ -7,7 +7,10 @@ AutoForm.hooks commentForm:
   	doc.owner = Meteor.userId()
   	doc
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 AutoForm.hooks updateProfile:
     onError: (operation, error, template) ->
         sAlert.error error

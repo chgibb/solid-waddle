@@ -9,7 +9,16 @@
         </div>
         {{/each}}
       </div>
+    <h1>Ticket Replies</h1>
+      <div class = "replies">
+        {{#each replyObject}}
+        <div class = "singleReply">
+          <h3>RE: {{title}}</h3>
+          <H4>{{reply}}</h4>
+        </div>
+        {{/each}}
+      </div>
     <h1>Create a Ticket</h1>
-      {{> quickForm collection="Tickets" id="createTicket" type="insert" omitFields = "senderID, roomID, recipientID"}}
+      {{> quickForm collection="Tickets" id="createTicket" type="insert" omitFields = "senderID, roomID, recipientID, reply"}}
   </div>
 </template>
