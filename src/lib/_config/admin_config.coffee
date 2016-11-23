@@ -2,6 +2,15 @@
 	name: Config.name
 	userSchema: null
 	collections:
+		FormParameters:
+			color: 'pink'
+			icon: 'gear'
+			tableColumns: [
+				{ label: 'Amenities', name: 'amenities'}
+				{ label: 'Room Capacities', name: 'room_capacities'}
+				{ label: 'Room Types', name:'room_types'}
+			]
+
 		Buildings:
 			color: 'yellow'
 			icon: 'building'
@@ -14,13 +23,6 @@
 		Rooms:
 			color: 'green'
 			icon: 'bed'
-			routes:
-		        new:
-		        	waitOn: -> Meteor.subscribe('buildings');
-				view:
-	         		waitOn: -> Meteor.subscribe('buildings');
-		        edit:
-		        	waitOn: -> Meteor.subscribe('buildings');
 			tableColumns: [
 				{ label: 'Room Number', name: 'room_number'}
 				{ label: 'Building', name: 'building_name'}
@@ -61,43 +63,6 @@
 
 	dashboard:
 		homeUrl: '/dashboard'
-		# widgets:[
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Buildings'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Rooms'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Tickets'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Users'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	 {
-        #     template: 'adminCollectionWidget'
-        #     data:
-        #       collection: 'Application'
-        #       class: 'col-lg-3 col-xs-6'
-		#   	 }
-		# 	{
-		# 	 template: 'adminMatchesPending'
-		# 	 data:
-		# 		 collection:'Users'
-		# 		 class: 'col-lg-3 col-xs-6'
-		# 	 }
-		# ]
+		
 	autoForm:
 		omitFields: ['createdAt', 'updatedAt']
