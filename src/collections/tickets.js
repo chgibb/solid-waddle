@@ -46,6 +46,14 @@ TicketsSchema = new SimpleSchema({
     min: 1,
     max: 5
   },
+  reply: {
+    type: String,
+    label: "Message reply",
+    optional: true,
+    autoform: {
+      rows: 5
+    }
+  },
   resolved:{
     type: Boolean,
     optional: true,

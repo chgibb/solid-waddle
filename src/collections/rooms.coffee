@@ -36,6 +36,7 @@ Schemas.Rooms = new SimpleSchema
 		      {label: "2", value: 2},
 		    ];
 
+	#TODO fix quirk of parameters not accepting a string as a value
 	amenities:
 		type: [String]
 		optional: true,
@@ -45,10 +46,13 @@ Schemas.Rooms = new SimpleSchema
 				[
 					{label: "Microwave", value: "Microwave"},
 					{label: "Fridge", value: "Fridge"},
-					{label: "Book Shelves", value: "Shelves"},
-					{label: "Fridge", value: "Fridge"},
+					{label: "Book Shelves", value: "Book Shelves"},
 					{label: "Surge Protector", value: "Surge Protector"}
-				];
+				].concat(_.map(FormParameters.find({}).fetch(), (param)->
+					label: param.amenities
+					value: 0
+					)
+				)
 
 	description:
 		type: String
