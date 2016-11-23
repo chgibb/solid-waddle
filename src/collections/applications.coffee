@@ -52,6 +52,11 @@ Schemas.Application = new SimpleSchema
 		optional: true
 		defaultValue: false
 
+	requested_room_mates:
+		type: [String]
+		optional: true
+		label: "Request Room Mates"
+
 	createdAt:
 		type: Date
 		optional: true
