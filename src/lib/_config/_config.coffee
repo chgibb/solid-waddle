@@ -4,13 +4,13 @@
 @Config =
 
 	# Basic Details
-	name: 'LURMS+'
+	name: 'LURMS++'
 	title: ->
 			TAPi18n.__ 'configTitle'
 	subtitle: ->
 			TAPi18n.__ 'configSubtitle'
 	logo: ->
-		'<b>' + @name + '</b>'
+		'<b><a href="/">' + @name + '</a></b>'
 	footer: ->
 		@name + ' - Copyright ' + new Date().getFullYear()
 
