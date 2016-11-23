@@ -10,7 +10,7 @@
 	subtitle: ->
 			TAPi18n.__ 'configSubtitle'
 	logo: ->
-		'<b><a href="gibb.net23.net/lurms">' + @name + '</a></b>'
+		'<b><a href="/">' + @name + '</a></b>'
 	footer: ->
 		@name + ' - Copyright ' + new Date().getFullYear()
 
