@@ -1,6 +1,4 @@
 <template name = "application">
-  <h1>Application</h1>
-
   <div class="container">
     <div class="row">
       {{#if hasApplied}}
@@ -10,6 +8,7 @@
           {{>appliedapplication}}
         {{/if}}
       {{else}}
+        <h1>Application</h1>
         {{> quickForm collection="Application" id="insertApplication" type = "insert" omitFields ="building_name, room_number, matched, createdAt"}}
       {{/if}}
     </div>

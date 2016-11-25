@@ -60,6 +60,7 @@ Schemas.Rooms = new SimpleSchema
 			rows: 5
 
 	occupants:
+		optional: true
 		type: String
 
 	createdAt:
