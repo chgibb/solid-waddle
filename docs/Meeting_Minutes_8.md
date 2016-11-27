@@ -1,6 +1,6 @@
 November 21 2016
 
-Eric was absent
+Erik was a bit late.
 
 # Meeting Minutes 8
 
