@@ -1,7 +1,39 @@
 <template name= "matchedapplication">
   <div class="applicationMatched">
+    <h1>Room Profile</h1>
     <div class="Matched">
       <h2>You have been assigned a room!</h2>
+      <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col-xs-12 buildingCol">
+            <h3>Building Information</h3>
+            <h4>Building Name: {{building.name}}</h4>
+            <h4>Building Location: {{building.address}}</h4>
+          </div>
+        </div>
+        <div class = "buildingCol row">
+          <div class = "col-xs-4">
+            <h3>Room Information</h3>
+            <h4>Room Number: {{room.room_number}}</h4>
+            <h4>Description: {{room.description}}</h4>
+            <h4>Amenities</h4>
+            <ul>
+              {{#each room.amenities}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class = "col-xs-8">
+            <img align="center" width="50%" class = "wow animated fadeIn" src = {{roomType}}>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-xs-12">
+            <h3>Room Mates</h3>
+            <h4>{{room.occupants}}</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
